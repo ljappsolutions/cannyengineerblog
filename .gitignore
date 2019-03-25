@@ -32,6 +32,8 @@ build/Release
 node_modules
 jspm_packages
 .idea
+package-lock.json
+yarn.lock
 
 # Optional npm cache directory
 .npm
