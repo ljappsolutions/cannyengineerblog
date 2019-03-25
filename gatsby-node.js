@@ -137,7 +137,8 @@ exports.createPages = ({ actions, graphql }) => {
                           limit: postsPerPage,
                           skip: i * postsPerPage,
                           totalPages: numPages,
-                          currentPage: i + 1
+                          currentPage: i + 1,
+                          blogCount: posts.length,
                         },
                       });
          });

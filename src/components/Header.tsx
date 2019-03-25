@@ -16,17 +16,6 @@ const HeaderWrapper: any = styled.header`
   background-size: cover;
   padding: 8rem 2rem 10rem;
   text-align: center;
-  ::after {
-    background: transparent url(/assets/mask.svg) no-repeat bottom left;
-    background-size: 101%;
-    bottom: -2px;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
   @media ${media.tablet} {
     padding: 4rem 2rem 6rem;
   }

@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-typescirpt-power-blog",
-  "description": "gatsyby blog template with typescript and tslint",
+  "name": "canny-engineer-blog",
+  "description": "Canny Engineer Blog - Writing all kind of devops articles",
   "version": "1.0.0",
-  "author": "Majid Hajian ( mhadaily@gmail.com )",
+  "author": "JD Sanchez",
   "keywords": [
     "gatsby, typescript",
     "blog"

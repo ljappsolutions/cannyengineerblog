@@ -16,7 +16,9 @@ export default class TagTemplate extends React.PureComponent<PageProps> {
       <Layout>
         <Helmet title={`${'Tags'} | ${config.siteTitle}`} />
         <Header>
-          <Link to="/">{config.siteTitle}</Link>
+          <Link to="/">
+            <img src={config.siteLogo} />
+          </Link>
           <SectionTitle>Tag &ndash; {tagName}</SectionTitle>
           <Subline sectionTitle light={true}>
             {subline} (See <Link to="/tags">all tags</Link>)

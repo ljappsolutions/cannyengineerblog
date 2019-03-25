@@ -15,7 +15,9 @@ export default class AllCategoryTemplate extends React.PureComponent<PageProps> 
         <Layout>
           <Helmet title={`Categories | ${config.siteTitle}`} />
           <Header>
-            <Link to="/">{config.siteTitle}</Link>
+            <Link to="/">
+              <img src={config.siteLogo} />
+            </Link>
             <SectionTitle>Categories</SectionTitle>
           </Header>
           <Wrapper>

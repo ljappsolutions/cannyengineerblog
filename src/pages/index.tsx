@@ -9,6 +9,7 @@ import { media } from '../utils/media';
 import rgba from 'polished/lib/color/rgba';
 import darken from 'polished/lib/color/darken';
 import lighten from 'polished/lib/color/lighten';
+import { BuyMeACoffee } from '../components/BuyMeACoffee';
 
 const Homepage = styled.main`
   display: flex;
@@ -34,7 +35,7 @@ const GridRow: any = styled.div`
       ? `linear-gradient(
       -185deg,
       ${rgba(darken(0.1, props.theme.colors.primary), 0.7)}, 
-      ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg.png) no-repeat`
+      ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(${config.defaultBg}) no-repeat`
       : null};
   background-size: cover;
   padding: 2rem 4rem;
@@ -52,13 +53,13 @@ const GridRow: any = styled.div`
 
 const HomepageContent: any = styled.div`
   max-width: 30rem;
-  text-align: ${(props: any) => (props.center ? 'center' : 'left')};
+  text-align: ${(props: any) => (props.center ? 'center' : 'justify')};
 `;
 
 export default class IndexPage extends React.Component<PageProps> {
   public render() {
     const { data } = this.props;
-    const { edges, totalCount } = data.allMarkdownRemark;
+    const { edges } = data.allMarkdownRemark;
     return (
       <Layout>
         <Wrapper fullWidth={true}>
@@ -69,17 +70,17 @@ export default class IndexPage extends React.Component<PageProps> {
                 <img src={config.siteLogo} />
                 <h1>
                   Hi. I am <br />
-                  Majid Hajian
+                  {config.author}
                 </h1>
-                <p>I write about JavaScript, Angular, Ember, React, Vue, GlimmerJs, NodeJs, Rails, Go, Gatsby and ...</p>
-                <Link to="/contact">
-                  <Button big={true}>
+                <p>{config.siteDescription}</p>
+                <a href="https://www.twitter.com/acannyengineer">
+                  <Button big>
                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-453-185-242 295q-18 23-49 23-13 0-22-4-19-7-30.5-23.5t-11.5-36.5v-349l864-1059-1069 925-395-162q-37-14-40-55-2-40 32-59l1664-960q15-9 32-9 20 0 36 11z" />
                     </svg>
-                    Contact
+                    Twitter
                   </Button>
-                </Link>
+                </a>
                 <Link to="/blog">
                   <Button big>
                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -94,12 +95,20 @@ export default class IndexPage extends React.Component<PageProps> {
               <HomepageContent>
                 <h2>About Me</h2>
                 <p>
-                  Though I am a results-driven front-end developer by day who have converted inactive designs to fully interactive,
-                  well-developed, accessible and standards-based user interfaces. I am completely enthusiast with a full stack environment
-                  and passionate about JavaScript world.
+                  Hello there, I'm JD, a canny engineer. Passionate about DevOps and everything around it. I have over 9 years of
+                  experience, finished a master degree in information systems and always looking to learn something new.
+                  <br />
+                  In 2018, I decided to start my own personal blog to fill some gaps that I've seen while working. There are always ton of
+                  tutorials for many things, and still, I find it difficult to accomplish some tasks.
+                  <br />
+                  If you like what I’m accomplishing, feel free to buy me a coffee.
+                  <br />
+                  <span style={{ textAlign: 'center', display: 'block' }}>
+                    <BuyMeACoffee />
+                  </span>
                 </p>
                 <hr />
-                <h2>Latest Blog</h2>
+                <h2>Latest Post</h2>
                 {edges.map(post => (
                   <Article
                     title={post.node.frontmatter.title}
@@ -112,7 +121,7 @@ export default class IndexPage extends React.Component<PageProps> {
                   />
                 ))}
                 <p className={'textRight'}>
-                  <Link to={'/blog'}>All articles ({totalCount})</Link>
+                  <Link to={'/blog'}>All articles</Link>
                 </p>
               </HomepageContent>
             </GridRow>

@@ -10,12 +10,14 @@ interface Props {
   pageContext: {
     currentPage: number;
     totalPages: number;
+    totalCount: number;
+    blogCount: number;
   };
 }
 
 export default class BlogPage extends React.Component<Props> {
   public render() {
-    const { currentPage, totalPages } = this.props.pageContext;
+    const { currentPage, totalPages, blogCount } = this.props.pageContext;
 
     const { data } = this.props;
     const { edges, totalCount } = data.allMarkdownRemark;
@@ -24,8 +26,10 @@ export default class BlogPage extends React.Component<Props> {
       <Layout>
         <Helmet title={`Blog | ${config.siteTitle}`} />
         <Header>
-          <Link to="/">{config.siteTitle}</Link>
-          <SectionTitle uppercase={true}>Latest stories ({totalCount})</SectionTitle>
+          <Link to="/">
+            <img src={config.siteLogo} />
+          </Link>
+          <SectionTitle uppercase={true}>Latest stories ({blogCount})</SectionTitle>
         </Header>
         <Wrapper>
           <Content>
@@ -40,7 +44,7 @@ export default class BlogPage extends React.Component<Props> {
                 key={post.node.fields.slug}
               />
             ))}
-            <Pagination currentPage={currentPage} totalPages={totalPages} url={'blog'} />
+            <Pagination pageCount={totalCount} currentPage={currentPage} blogCount={blogCount} totalPages={totalPages} url={'blog'} />
           </Content>
         </Wrapper>
       </Layout>

@@ -31,7 +31,9 @@ export default class PostPage extends React.PureComponent<Props> {
             <SEO postPath={post.fields.slug} postNode={post} postSEO />
             <Helmet title={`${post.frontmatter.title} | ${config.siteTitle}`} />
             <Header banner={post.frontmatter.banner}>
-              <Link to="/">{config.siteTitle}</Link>
+              <Link to="/">
+                <img src={config.siteLogo} />
+              </Link>
               <SectionTitle>{post.frontmatter.title}</SectionTitle>
               <Subline light={true}>
                 {post.frontmatter.date} &mdash; {post.timeToRead} Min Read &mdash; In{' '}

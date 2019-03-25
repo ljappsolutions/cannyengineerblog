@@ -1,8 +1,12 @@
-## Gatsby 2 Power blog starter with Typescript
-More features are coming, stay tuned! 
+## Canny Engineer Blog
+My blog repository built with Gatsby.js using mhadialy's template
 
 ### Description
-This is a standard starter with Typescript, TSLint, StyleLint, Prettier, Lint-Staged(Husky), Sass, StyleComponent, PWA
+Hello there, I'm JD, a canny engineer. Passionate about DevOps and everything around it. I have over 9 years of experience, finished a master degree in information systems and always looking to learn something new.
+<br />
+In 2018, I decided to start my own personal blog to fill some gaps that I've seen while working. There are always ton of tutorials for many things, and still, I find it difficult to accomplish some tasks.
+<br />
+If you like what I’m accomplishing, feel free to buy me a coffee.
 
 ### Keywords
   - PWA

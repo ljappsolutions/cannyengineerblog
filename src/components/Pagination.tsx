@@ -85,17 +85,21 @@ interface Props {
   currentPage: number;
   totalPages: number;
   url: string;
+  pageCount: number;
+  blogCount: number;
 }
 
 export class Pagination extends React.PureComponent<Props> {
   public render() {
-    const { currentPage, totalPages, url } = this.props;
+    const { currentPage, totalPages, url, pageCount, blogCount } = this.props;
     const isFirst = currentPage === 1;
     const isLast = currentPage === totalPages;
     const prevPage = currentPage - 1 === 1 ? `/${url}/` : `/${url}/${(currentPage - 1).toString()}`;
     const nextPage = `/${url}/${(currentPage + 1).toString()}`;
     return totalPages > 1 ? (
       <PaginationContainer>
+        Showing {pageCount} of {blogCount}
+        <br />
         <PaginationContent>
           {!isFirst && (
             <Link className="prev page-numbers" to={prevPage} rel="prev">
