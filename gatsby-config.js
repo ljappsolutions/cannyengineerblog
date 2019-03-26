@@ -48,11 +48,24 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
-              rel: 'nofollow noopener noreferrer',
             },
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-autolink-headers',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-figure-caption`,
+            options: {figureClassName: 'md-figure'},
+          },
         ],
       },
     },
@@ -75,5 +88,6 @@ module.exports = {
         icon: config.favicon,
       },
     },
+    `gatsby-plugin-sharp`,
   ]
 };

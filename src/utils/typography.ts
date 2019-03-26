@@ -8,6 +8,14 @@ const typography = new Typography({
   headerFontFamily: [config.headerFontFamily, 'sans-serif'],
   bodyFontFamily: [config.bodyFontFamily, 'sans-serif'],
   headerWeight: 700,
+  overrideStyles: () => ({
+    img: {
+      marginBottom: 0,
+    },
+    figure: {
+      textAlign: 'center',
+    },
+  }),
   googleFonts: [
     {
       name: config.headerFontFamily,

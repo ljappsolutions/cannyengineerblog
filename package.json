@@ -5,7 +5,12 @@
   "author": "JD Sanchez",
   "keywords": [
     "gatsby, typescript",
-    "blog"
+    "blog",
+    "canny",
+    "engineer",
+    "cannyengineer",
+    "devops",
+    "aws"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -70,6 +75,9 @@
     "typography": "^0.16.17"
   },
   "dependencies": {
-    "gatsby-plugin-google-tagmanager": "^2.0.5"
+    "gatsby-plugin-google-tagmanager": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-remark-figure-caption": "^2.0.0",
+    "gatsby-remark-images": "^3.0.10"
   }
 }

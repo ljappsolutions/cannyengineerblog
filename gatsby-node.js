@@ -144,6 +144,8 @@ exports.createPages = ({ actions, graphql }) => {
          });
 
     createClassificationPages({ createPage, posts, postsPerPage, numPages });
+    // const sortedPosts = _.sortBy(posts, x => new Date(x.node.frontmatter.date));
+    // console.log(sortedPosts.map(x => x.node.frontmatter.date));
 
     posts.forEach(({ node }, index) => {
       const next = index === 0 ? null : posts[index - 1].node;
