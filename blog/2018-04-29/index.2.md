@@ -4,6 +4,7 @@ title: "Use AWS Fargate to deploy your Expressjs app (3/3)"
 category: "AWS Tutorial"
 tags: ['AWS', 'NODE.JS', 'EXPRESS.JS', 'FARGATE', 'DOCKER']
 banner: "/assets/2018-04-29/DevOps-Gear.png"
+path: "/blog/fargate-nodejs-express-docker-deployment-3"
 ---
 
 ### CodePipeline

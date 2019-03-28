@@ -4,7 +4,7 @@ import PageProps from '../models/PageProps';
 import { Article, Content, Header, Layout, SectionTitle, Subline, Wrapper } from '../components';
 import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
-import kebabCase from 'lodash/kebabCase';
+import Post from '../models/Post';
 
 export default class TagTemplate extends React.PureComponent<PageProps> {
   public render() {
@@ -27,12 +27,12 @@ export default class TagTemplate extends React.PureComponent<PageProps> {
         <Wrapper>
           <Content>
             {posts
-              ? posts.map((post: any, index) => (
+              ? posts.map((post: Post, index) => (
                   <Article
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
                     excerpt={post.excerpt}
-                    slug={kebabCase(post.frontmatter.title)}
+                    path={post.frontmatter.path}
                     timeToRead={post.timeToRead}
                     category={post.frontmatter.category}
                     key={index}

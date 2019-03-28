@@ -39,7 +39,7 @@ export default class BlogPage extends React.Component<Props> {
                 date={post.node.frontmatter.date}
                 excerpt={post.node.excerpt}
                 timeToRead={post.node.timeToRead}
-                slug={post.node.fields.slug}
+                path={post.node.frontmatter.path}
                 category={post.node.frontmatter.category}
                 key={post.node.fields.slug}
               />
@@ -64,6 +64,7 @@ export const BlogQuery = graphql`
             title
             date(formatString: "DD.MM.YYYY")
             category
+            path
           }
           excerpt(pruneLength: 200)
           timeToRead

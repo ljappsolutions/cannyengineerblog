@@ -76,6 +76,7 @@ export const postQuery = graphql`
         category
         tags
         banner
+        path
       }
       timeToRead
     }

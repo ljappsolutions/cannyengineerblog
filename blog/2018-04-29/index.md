@@ -4,6 +4,7 @@ title: "Use AWS Fargate to deploy your Expressjs app (1/3)"
 category: "AWS Tutorial"
 tags: ['AWS', 'NODE.JS', 'EXPRESS.JS', 'FARGATE', 'DOCKER']
 banner: "/assets/2018-04-29/DevOps-Gear.png"
+path: "/blog/fargate-nodejs-express-docker-deployment-1"
 ---
 
 The following guide helps you to configure CodePipeline services in AWS to run Docker containers for an ExpressJS application. The whole process can be divided in 3 phases, which are: 
@@ -106,4 +107,4 @@ After we have successfully created the Dockerfile, build a container and tested 
 1. "docker images": this command will list all the images existing locally. There should be at least 2 images: the base image and the one we created. Look at the ImageId column and search for the image that you want to remove.
 1. "docker rmi [image-id]": this command will remove the image we indicate, replace the tag [image-id] with the image id found in the previous command. Note: same concept as container-id applies for the image-id tag
 
-Continue with the second part of this tutorial [here](/blog/use-aws-fargate-to-deploy-your-expressjs-app-2-3)
+Continue with the second part of this tutorial [here](/blog/fargate-nodejs-express-docker-deployment-2)

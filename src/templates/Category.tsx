@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { Layout, Wrapper, Header, Subline, Article, SectionTitle, Content } from '../components';
 import config from '../../config/SiteConfig';
-import kebabCase from 'lodash/kebabCase';
 import PageProps from '../models/PageProps';
+import Post from '../models/Post';
 
 export default class Category extends React.PureComponent<PageProps> {
   public render() {
@@ -27,12 +27,12 @@ export default class Category extends React.PureComponent<PageProps> {
         <Wrapper>
           <Content>
             {posts
-              ? posts.map((post: any, index) => (
+              ? posts.map((post: Post, index) => (
                   <Article
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
                     excerpt={post.excerpt}
-                    slug={kebabCase(post.frontmatter.title)}
+                    path={post.frontmatter.path}
                     timeToRead={post.timeToRead}
                     category={post.frontmatter.category}
                     key={index}

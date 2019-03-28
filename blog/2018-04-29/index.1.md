@@ -4,6 +4,7 @@ title: "Use AWS Fargate to deploy your Expressjs app (2/3)"
 category: "AWS Tutorial"
 tags: ['AWS', 'NODE.JS', 'EXPRESS.JS', 'FARGATE', 'DOCKER']
 banner: "/assets/2018-04-29/DevOps-Gear.png"
+path: "/blog/fargate-nodejs-express-docker-deployment-2"
 ---
 
 ### Fargate
@@ -135,4 +136,4 @@ After all this configurations are done, click on Next Step. We will skip Step 3 
 
 Finally, review all the configuration done and click on create. You will receive a success message indicating that the service has been created.
 
-Continue with the third part of this tutorial [here](/blog/use-aws-fargate-to-deploy-your-expressjs-app-3-3)
+Continue with the third part of this tutorial [here](/blog/fargate-nodejs-express-docker-deployment-3)
